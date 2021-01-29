@@ -1,0 +1,70 @@
+
+/* 
+  HW1: max-, min- +width, height - use cases - CSS;
+  HW2: why padding < margin in .content article?  - DESIGN; test w/different values
+
+     padding influenteaza spatiul din toate partile in interiorul containerului, odata cu marirea valorii vom crea si 
+     mai mult spatiu liber care din punct de vedere al design-lui nu se priveste bine....in special va afecta spatiul pe orizontal, luandu-ne din spatiul pe care noi vrem sa 
+     il folosim cat mai eficient in contextul adaptivitatii si responsivitatii.
+
+     margin, in special margin bottom aici ne afecateaza spatiul pe verticala - lucru care nu are un impact la fel de mare ca in cazul afectatii spatiului pe orizontala
+
+  HW3: content <600px width=body - 2nd breakpoint (400px-600px) content 100% from body
+*/
+
+
+body {
+    font-family: sans-serif;
+    background-color: #ddd;
+    width: 100%;
+}
+
+.content {
+    width: 80%;
+    margin: 1em auto;
+    background-color: #fff;
+    padding: 1em;
+    /* text-align: justify; nu functioneaza ptr ultimul rand de text */
+    text-align: center;
+}
+
+.content article {
+    border: 1px solid #eee;
+    padding: .5em;
+    margin-bottom: .75em;
+    
+    text-align: left;
+
+    display: inline-block;
+    width: 45%;
+}
+
+.content article:nth-child(even) {
+    margin-right: .5em;
+}
+.content article:nth-child(odd) {
+    margin-left: .5em;
+}
+
+
+/* MOBILE < 1000px  - at-rule*/
+
+@media (max-width: 1000px){
+   .content article {
+       display: block;
+       width: auto;
+       margin-left: 0 !important;
+       margin-right: 0 !important;
+   }
+}
+
+@media (max-width: 500px) {
+   .content {
+       width: 100vw;
+       margin: 0;
+       padding: .2em;
+      
+    }
+
+
+}
