@@ -7,37 +7,125 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
    <div class="navbar-wrapper">
+          <!-- :checked - inputul e cel care se afla in starea checked -->
+         <input type="checkbox" id="toggler">  <!--facem legatura dintre input si lable prin ID-->
          <nav class="navbar">
+            
              <ul>
+                <li class="burger-menu">
+                    <label for="toggler">  
+                         <i class="fas fa-bars"></i>
+                    </label>
+                </li>
                   <li class="brand">
                       <a href="">
                           <span class="logo"> <img src="images/logo.svg" alt="logo"> </span>
-                              <span class="shop-name"> Crazy Shop </span> 
+                              <span class="shop-name"> Petit Patissier </span> 
                      </a>
                  </li>
 
-                  <li class="burger-menu"><a href=""><i class="fas fa-bars"></i></a></li>
+                  
 
                      <!-- Read about VECTOR vs RASTER  -->
                      <!-- HW1 - vertical align crazy shop  -->
 
-                 <li class="main"><a href="">Products</a></li>
-                 <li class="main"><a href="">Services</a></li>
-                 <li class="main"><a href="">Partners</a></li>
+                 <li class="main"><a href="">Welcome</a></li>
+                 <li class="main"><a href="">Sweets</a></li>
+                 <li class="main"><a href="">Classes</a></li>
+                 <li class="main"><a href="">Catering</a></li>
+                 
 
                  <li class="contacts"><a href=""><i class="fas fa-phone-square-alt"></i><span class="phone-number">+12345678</span></a></li>
-                 <li class="contacts"><a href=""><i class="fab fa-viber"></i></a></li>
+                 <li class="contacts"><a href=""><i class="fab fa-instagram-square"></i></a></li>
                  <li class="contacts"><a href=""><i class="fab fa-facebook-messenger"></i></a></li>
 
                  <li class="user"><a href=""><i class="fas fa-user-tie"></i></a></li>
-                 <li class="user"><a href=""><i class="fas fa-suitcase"></i></a></li>
+                 <li class="user"><a href=""><i class="fas fa-shopping-bag"></i></a></li>
              </ul>
          </nav>
    </div>
-    
+
+      <div class="bar">
+            <div></div>
+            <div> <img src="images/cup-cake.svg" alt="cupcake" class="bar-logo"> </div>
+            <div class="about">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis mollitia numquam et voluptatibus perferendis nemo veritatis atque laboriosam vel natus ipsa libero sint quos similique accusamus consectetur, repellendus dolorum non doloribus exercitationem, reiciendis minus at?</p>
+            </div>
+       </div>
+     <main>
+        <div class="recipe">
+            <h2>Recipe of the Day</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC2_KAuXaj_7sraGW84CHnlKEHin-KTZO9_Q&usqp=CAU" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam sed provident voluptate? Nulla consequatur doloribus hic rerum delectus, nemo eos numquam dicta. Ad, beatae? Enim at suscipit blanditiis excepturi ab minima, temporibus aliquam nobis, facilis neque mollitia, maxime sequi deleniti soluta adipisci ea ipsum aut perspiciatis cumque dolore! Recusandae assumenda incidunt quisquam laudantium! Rem, sed aliquam. Aliquid sint recusandae qui tempora illum aliquam, omnis quidem.</p>
+            <a href="">continue baking...</a>
+        </div>
+        <div class="favorite">
+             <h2>All Times Favorite</h2>
+             <div class="fav-1">
+                 <h3>Banana Muffin</h3>
+                 <img class="fave" src="images/muff.jpg" alt="">
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique debitis quia debitis provident iusto culpa debitis debitis dolor?</p>
+                 <button>Add to cart</button>
+             </div>
+             <div class="fav-2">
+                <h3>Choco Cookie</h3>
+                 <img class="fave" src="images/cookie.jpg" alt="">
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias eius laboriosam et asperiores praesentium fuga quidem.</p>
+                 <button>Add to cart</button>
+                </div>
+             
+             <div class="fav-3">
+                <h3>Cinnamon Latte</h3>
+                <img class="fave" src="images/coffee.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aspernatur consectetur fuga libero nihil voluptas?</p>
+                <button>Add to cart</button>
+            </div>
+
+           
+        </div>
+        <div class="baker">
+            <h2>From the Baker...</h2>
+            <img src="https://i.pinimg.com/736x/2e/a8/58/2ea85876aaafb3d0d77e04fcd90445a1.jpg" alt="">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum eveniet officiis reprehenderit tempore ratione dolor reiciendis quaerat, commodi est corrupti, nihil voluptatem maiores rem accusamus sunt ut velit itaque ipsa.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum cum qui vitae accusamus? Deleniti, soluta. Harum omnis ipsa sed vitae voluptatum excepturi, sunt facere possimus autem dolore, libero dolorum modi. Nulla deleniti natus accusantium aliquam corrupti, cumque labore. Necessitatibus, repellat.</p>
+             <a href="">keep reading</a>
+        </div>
+    </main>
+    <footer>
+          <div class="footer">
+            <p>
+               12467 First Corner Street,<br>
+               Sunshine, Paradise 20021
+            </p>
+
+            <p>
+                <h2>Follow us</h2>
+                <a href=""><i class="fab fa-facebook-square"></i></a>
+                <a href=""><i class="fab fa-instagram-square"></i></a>
+                <a href=""><i class="fab fa-pinterest-square"></i></a>
+                <a href=""><i class="fab fa-twitter-square"></i></a>
+            </p>
+         </div>
+    </footer>
 </body>
 </html>
+
+
+
+
+
+<!-- 
+
+    label - input example - elementul are face actiunea si cel care sufera poate sa se afle cu totul in diferite locuri in document.
+    input - lable - s-a facut legatura prin atributul for="" din label si id="" din input.  
+ -->

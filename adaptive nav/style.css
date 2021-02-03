@@ -7,11 +7,25 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #111;
+    background-color: #565264;
+}
+
+h2  {
+    font-weight: bold;
+    padding: .5em;
+}
+
+h3 {
+    color: aliceblue;
 }
 
 .navbar-wrapper {
-    background: linear-gradient(#333, #444, #333);
+    background: linear-gradient(#706677, #a6808c, #706677);
+    border-bottom: 5px dotted #a6808c;
+}
+
+#toggler {
+    display: none;
 }
 
 .navbar {
@@ -23,12 +37,14 @@ body {
 .navbar .logo, .shop-name {
     display: block;
     position: relative;
-    top: 20px;
+   
+    top: 2em;
+    z-index: 1;
     
 }
 
 .navbar .shop-name {
-    left: -15px;
+    left: -18px;
 }
 
 .navbar ul {
@@ -41,33 +57,40 @@ body {
     /* border: 1px solid white; */
     padding: 0 .5em;
     white-space: nowrap;
+    font-family: 'Taviraj', serif;
+    
+}
+
+.navbar ul li.main {
+    text-align: right; 
+}
+
+.navbar ul li.burger-menu:nth-child(1) {
+    display: none;
 }
 
 .navbar ul li.main:nth-child(3) {
     padding-left: 15%; 
 }
 
-.navbar ul li.main:nth-child(5) {
+.navbar ul li.main:nth-child(6) {
     padding-right: 5%; 
+    text-align: left;
+   
+    
 }
 
-.navbar ul li.main {
-  text-align: right; 
-}
 
-.navbar ul li.burger-menu:nth-child(2) {
-    display: none;
-}
 
 .navbar ul li.contacts {
  text-align: left; 
 }
 
-.navbar ul li.contacts:nth-child(6) {
+.navbar ul li.contacts:nth-child(7) {
     padding-left: 5%;
 }
 
-.navbar ul li.contacts:nth-child(8) {
+.navbar ul li.contacts:nth-child(9) {
     padding-right: 15%;
 }
 
@@ -76,129 +99,384 @@ body {
 }
 
 .navbar .brand img {
-    height: 3em;
+    height: 3.5em;
     vertical-align: middle;
     
 }
 
-.navbar a {
+.navbar a,
+.navbar i {
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 
 @media (max-width: 1500px) {
     .navbar ul li.main:nth-child(3) {
-        padding-left: 15%; 
+        padding-left: 12%; 
     }
     
-    .navbar ul li.main:nth-child(5) {
+    .navbar ul li.main:nth-child(6) {
         padding-right: 3%; 
     }
 
-    .navbar ul li.contacts:nth-child(6) {
+    .navbar ul li.contacts:nth-child(7) {
         padding-left: 3%;
     }
     
-    .navbar ul li.contacts:nth-child(8) {
-        padding-right: 15%;
-    }
-}
-
-@media (max-width: 1250px) {
-    .navbar ul li.main:nth-child(3) {
-        padding-left: 10%; 
-    }
-    
-    .navbar ul li.main:nth-child(5) {
-        padding-right: 2%; 
-    }
-
-    .navbar ul li.contacts:nth-child(6) {
-        padding-left: 2%;
-    }
-    
-    .navbar ul li.contacts:nth-child(8) {
-        padding-right: 10%;
+    .navbar ul li.contacts:nth-child(9) {
+        padding-right: 12%;
     }
 }
 
 @media (max-width: 1000px) {
-    .navbar ul li.contacts:nth-child(6) .phone-number {
-        display: none;
+    .navbar ul li.main:nth-child(3) {
+        padding-left: 10%; 
+    }
+    
+    .navbar ul li.main:nth-child(6) {
+        padding-right: 2%; 
+    }
+
+    .navbar ul li.contacts:nth-child(7) {
+        padding-left: 2%;
+    }
+    
+    .navbar ul li.contacts:nth-child(9) {
+        padding-right: 10%;
+    }
+
+    main div.recipe {
+        display: block;
+        width: 93%;
+        
+    }
+
+    main div.favorite {
+        display: block;
+        width: 95%;
+    }
+    
+    main div.favorite .fav-1 {
+        display: block;
+        width: 95%;
+    }
+
+    main div.favorite .fav-2 {
+        display: block;
+        width: 95%;
+    }
+
+    main div.favorite .fav-3 {
+        display: block;
+        width: 95%;
     }
 }
 
-
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+    
     .navbar ul li.main:nth-child(3) {
         padding-left: 5%; 
     }
     
-    
-     /* ascundem partners presupunand ca la nivelul dat nu este cea mai importanta parte a meniului */
-    .navbar ul li.main:nth-child(5)  {
-        display: none;
-    }
-       /* presupunem ca acest website are cea mai mare rata de raspundere/customer service via fb mesenger de aceea lasam dor link-ul cu fb messenger rapid accesibil la acest nivel de vizualizare, ascundem viber si tel icon */
-    .navbar ul li.contacts:nth-child(6)  {
+    .navbar ul li.contacts:nth-child(7) .phone-number {
         display: none;
     }
 
-    .navbar ul li.contacts:nth-child(7)  {
-        display: none;
+    main div.recipe {
+        display: block;
+        width: 95%;
     }
 
-    .navbar ul li.contacts:nth-child(8) {
-        padding-right: 7%;
-    }
-}
-
-
-@media (max-width: 400px) {
-
-    /* la acest width level, lasam vizibil logo-ul ca user-ul sa stie pe ce site se afla, introducem meniul burger prin care se pot accesa toate meniurile ascunse, de asemenea e vizibil cart-ul, si account pentru ca sa poate fi usor accesat */
-    .navbar {
+    main div.favorite {
+        display: block;
         width: 95%;
     }
     
-    .navbar ul li.burger-menu:nth-child(2) {
-        display: table-cell;
-        text-align: right;
-        padding-left: 3em;
-       
+    main div.favorite .fav-1 {
+        display: block;
+        width: 95%;
     }
 
-    .navbar ul li.main:nth-child(3) {
+    main div.favorite .fav-2 {
+        display: block;
+        width: 95%;
+    }
+
+    main div.favorite .fav-3 {
+        display: block;
+        width: 95%;
+    }
+
+    main .baker {
+        width: 95%;
+    }
+
+}
+
+@media (max-width:700px) {
+   .navbar ul li.main, 
+   .navbar ul li.contacts {
+       display: none;
+   }
+
+   .navbar ul li.burger-menu:first-child {
+       display: table-cell;
+   }
+
+   .navbar ul li.brand {
+       padding-left: 35%;
+   }
+
+   #toggler:checked+.navbar .main {
+       display: block;
+       position: absolute;
+       text-align: left;
+       /* width auto */
+       left:0;
+       right:0;
+       background-color: #706677;
+       border-bottom: 1px dotted #a6808c;
+       font-size: 1.5em;
+    }
+
+    #toggler:checked+.navbar .main:nth-child(3) {
+       text-align: left;
+       padding-left: .5em;
+        top: 4.7em;
+        animation: drop-1 1s;
+        
+    }
+    #toggler:checked+.navbar .main:nth-child(4) {
+        
+        top: 5.8em;
+        animation: drop-2 1s;
+    }
+    #toggler:checked+.navbar .main:nth-child(5) {
+        top: 6.8em;
+        animation: drop-3 1s;
+    }
+    #toggler:checked+.navbar .main:nth-child(6) {
+        
+        top: 7.8em;
+        animation: drop-4 1s;
+    }
+
+    div.bar 
+       div:nth-child(1),
+       div:nth-child(2) {
         display: none;
     }
 
-    .navbar ul li.main:nth-child(4) {
-        display: none;
+    main div.recipe {
+        display: block;
+        width: 93%;
+        
+    }
+
+    main div.favorite {
+        display: block;
+        width: 95%;
     }
     
-    .navbar ul li.main:nth-child(5)  {
-        display: none;
-    }
-    
-    .navbar ul li.contacts:nth-child(6)  {
-        display: none;
+    main div.favorite .fav-1 {
+        display: block;
+        width: 95%;
     }
 
-    .navbar ul li.contacts:nth-child(7)  {
-        display: none;
+    main div.favorite .fav-2 {
+        display: block;
+        width: 95%;
     }
 
-    .navbar ul li.contacts:nth-child(8) {
-        display: none;
+    main div.favorite .fav-3 {
+        display: block;
+        width: 95%;
     }
 
-    .navbar ul li.user:nth-child(9)  {
-        padding-left: .10em;
+    main .baker {
+        width: 95%;
     }
 
-    .navbar ul li.user:nth-child(10) {
-        padding-left: .10em;
+}
+
+@keyframes drop-1 {
+    from {
+        top:3em;
+    }
+
+    to {
+        top: 4.7em;
     }
 }
 
-/* adaptive - 400px */
+@keyframes drop-2 {
+    from {
+        top:3em;
+    }
+
+    to {
+        top: 5.8em;
+    }
+}
+
+@keyframes drop-3 {
+    from {
+        top:3em;
+    }
+
+    to {
+        top: 6.8em;
+    }
+}
+
+@keyframes drop-4 {
+    from {
+        top:3em;
+    }
+
+    to {
+        top: 7.8em;
+    }
+}
+
+
+
+.bar div:nth-child(1) {
+    display: inline-block;
+    position: absolute;
+    top: 7em;
+    left: 2.5%;
+    width: 95%;
+    
+    
+    border-top: 3px solid #a6808c;
+}
+.bar .bar-logo {
+    position: absolute;
+    left: 48%;
+    top: 6em;
+    height: 1.5em;
+    
+}
+
+.bar .about  {
+    
+    margin-top: 4em;
+    text-align: center;
+}
+
+
+
+main .recipe {
+    display: inline-block;
+    width: 30%;
+    height: 50%;
+    margin-left: 1.5%;
+    margin-top: 2em;
+    padding: .5em;
+    background-color: #706677;
+    color: black;
+    text-align: center;
+    border-radius: .25em;
+}
+
+
+
+main .recipe img {
+    width: 50%;
+    height: 50%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+main .favorite {
+    display: inline-block;
+    /* position: absolute; */
+    margin-top: 2em;
+    margin-left: 1em;
+    width: 65%;
+    height: 50%;
+    background-color: #706677;
+    text-align: center;
+    border-radius: .25em;
+}
+
+main .favorite .fav-1, .fav-2, .fav-3 {
+   display: inline-block;
+   /* position: relative; */
+    /* background-color: #fff; */
+    padding: .5em;
+    width: 30%;
+    height: 60%;
+    
+}
+
+
+
+main .favorite img {
+    width: 100%;
+    display: inline-block;
+    margin-top: .5em;
+    margin-bottom: 1.6em;
+    border: .2em solid #a6808c;
+    padding: .2em;
+    
+}
+
+main .favorite button {
+    padding: .2em;
+    margin-top: .5em;
+    background-color: #a6808c;
+    color: white;
+    border-radius: .5em;
+    border: .2em dotted #565264;
+    cursor: pointer;
+}
+
+main .baker {
+    width: 96%;
+    margin-top: 2em;
+    margin-left: 1.5%;
+    padding: .5em;
+    background-color: #706677;
+    text-align: center;
+    border-radius: .25em;
+
+    
+}
+
+main .baker > p {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+}
+
+main .baker img {
+    width: 20%;
+    display: inline-block;
+    padding: .5em;
+    border-radius: 30%;
+    border: .3em dotted #e27296;
+}
+
+
+.footer {
+   width: 100%;
+    
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-w5PO9Q7Lb81VMb-PYh3yaJqYQ3Q_xdli4A&usqp=CAU);
+    text-align: center;
+    margin-top: 1em;
+    opacity: 0.6;
+    font-weight: bolder;
+}
+
+.footer i {
+    color: #3414e9;
+    font-size: 3em;
+    padding-top: .4em;
+    padding-bottom: 1em;
+    opacity: 1;
+}
+
