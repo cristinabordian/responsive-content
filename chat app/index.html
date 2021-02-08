@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Chat App Layout </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 
+        mobile device only 
+        --------------------------
+       -display
+       -position
+       + meta viewport
+       + media -> picture +img
+       + UX/UI -> touch: portrait/landscape
+       
+       HW*  - variabile (color palette), 
+            - css units (vmin, vmax)
+            - dark/light theme 
+
+
+        HW1 - ol or ul - in asa get de applicatii, de obicei lista este neordonata, most recent active iesind in fata. Daca tot in acesta aplicatie am avea lista de contacte propriu zisa, atunci ar fi util sa folosim OL acolo
+        Hw2 - layout for 1st contact 
+                -html + semantic - group html
+                      Ca si exemplul de mai inainte, cred ca putem folosi figure + figcaption. Eu am ales sa folosesc article 
+                      ARTICLE 
+                       - self-contained composition in a doc
+                       -indended to be independently distributable or reusable
+                       -typically has a heading
+                       -can be nested to show related content
+                 
+                HW-space, alignment, display: table, block, inline-block etc
+                        display: inline-block, easy to position elements and align them as needed. 
+                        Spatiu dintre avatar si message content sa fie destul de mare ca sa se observe elementele dar mic incat se se vada cu sunt parte dintr-un intreg 
+
+                - css units - arguments  - mix between em, vw, vh
+     -->
+     <div class="phone">
+          <section class="app">
+             <header>
+                 <div class="menu"><a href=""><i class="fas fa-bars"></i></a></div>
+                 <div class="app__messages"><h3>Messages</h3></div>
+                 <div class="search__bar">
+                    <i class="fas fa-search"></i>
+                    
+                 </div>
+             </header>
+             <main>
+                 <ul class="contacts">
+                     <li class="contacts__profile status--offline">
+                         <article>
+                             <div class="profile__avatar">
+                               <img  src="pictures/avatar1.jpeg" alt="">
+                             </div>
+                               <div class="profile__text">
+                                  <h3>Jake Winters</h3>
+                                  <p>Please send me the info via email</p>
+                                </div>
+                              <span class="message__status status--delivered"><i class="fas fa-check-double"></i></span>
+                              <span class="message__time ">9:30</span>
+                         </article>
+                     </li>
+
+                     <li class="contacts__profile status--offline">
+                        <article>
+                              <div class="profile__avatar">
+                                 <img  src="pictures/emma.jpeg" alt="">
+                              </div>
+                              <span class="profile__text">
+                                 <h3>Emma Stone</h3>
+                                 <p>Let's do something fun!</p>
+                               </span>
+                            <span class="message__status status--seen"><i class="fas fa-check-double"></i></span>
+                            <span class="message__time">9:30</span>
+                        </article>
+                    </li>
+
+                    <li class="contacts__profile status--recent">
+                        <article>
+                              <div class="profile__avatar">
+                                 <img  src="pictures/avatar3.jpg" alt="">
+                              </div>
+                              <div class="profile__text">
+                                 <h3>Gal Gadot</h3>
+                                 <p>Hey! What are you up to?</p>
+                               </div>
+                            <span class="message__status status--delivered"><i class="fas fa-check-double"></i> </span>
+                            <span class="message__time">9:30</span>
+                        </article>
+                    </li>
+
+                    <li class="contacts__profile status--online">
+                       <article>
+                              <div class="profile__avatar">
+                                   <img  src="pictures/avatar4.jpg" alt="">
+                              </div>
+                             <span class="profile__text">
+                                <h3>Hugh Jackman</h3>
+                                <p>Meet up at the usual place? ☕</p>
+                              </span>
+                           <span class="message__status status--delivered"><i class="fas fa-check-double"></i> </span>
+                           <span class="message__time">9:30</span>
+                       </article>
+                   </li>
+
+                   <li class="contacts__profile status--recent">
+                    <article>
+                            <div class="profile__avatar">
+                              <img  src="pictures/tauriel.png" alt="">
+                            </div>
+                          <div class="profile__text">
+                             <h3>Tauriel Lotr</h3>
+                             <p>I can do this all day</p>
+                           </div>
+                        <span class="message__status status--seen"><i class="fas fa-check-double"></i> </span>
+                        <span class="message__time">9:30</span>
+                    </article>
+                </li>
+
+                <li class="contacts__profile status--offline">
+                   <article>
+                       <div class="profile__avatar">
+                         <img  src="pictures/avatar5.jpg" alt="">
+                      </div>
+                         <span class="profile__text">
+                            <h3>Anne Hathaway</h3>
+                            <p>Gotta love this show...❤️</p>
+                          </span>
+                       <span class="message__status "><i class="fas fa-check-double"></i> </span>
+                       <span class="message__time">9:30</span>
+                   </article>
+               </li>
+
+               <li class="contacts__profile status--online">
+                <article>
+                     <div class="profile__avatar">
+                        <img  src="pictures/avatar6.jpg" alt="">
+                     </div>
+                      <div class="profile__text">
+                         <h3>Matthew Gray</h3>
+                         <p>Can't do today. Tomorrow?</p>
+                       </div>
+                    <span class="message__status status--seen"><i class="fas fa-check-double"></i> </span>
+                    <span class="message__time">9:30</span>
+                </article>
+            </li>
+
+            <li class="contacts__profile status--recent">
+               <article>
+                  <div class="profile__avatar">
+                    <img  src="pictures/avatar7.jpg" alt="">
+                 </div>
+                     <span class="profile__text">
+                        <h3>JJ Cook</h3>
+                        <p>This is my favorite episode</p>
+                      </span>
+                   <span class="message__status"><i class="fas fa-check-double"></i> </span>
+                   <span class="message__time">9:30</span>
+               </article>
+           </li>
+
+           <li class="contacts__profile status--offline">
+            <article>
+                     <div class="profile__avatar">
+                         <img  src="pictures/avatar8.jpg" alt="">
+                      </div>
+                  <div class="profile__text">
+                     <h3>Keanu Reeves</h3>
+                     <p>I have family visiting today</p>
+                   </div>
+                <span class="message__status status--seen"><i class="fas fa-check-double"></i> </span>
+                <span class="message__time">9:30</span>
+            </article>
+        </li>
+
+        <li class="contacts__profile status--awhile">
+           <article>
+               <div class="profile__avatar">
+                 <img  src="pictures/avatar9.jpg" alt="">
+              </div>
+                <span class="profile__text">
+                    <h3>Dakota Johnson</h3>
+                    <p>It's perfect for an outside workout</p>
+                  </span>
+               <span class="message__status"><i class="fas fa-check-double"></i> </span>
+               <span class="message__time">9:30</span>
+           </article>
+       </li>
+
+            </ul>
+             </main>
+             <footer>
+                 <div class="chat"><i class="far fa-comment-alt"></i></div>
+                 <div class="calls"><i class="fas fa-phone-alt"></i></div>
+                 <div class="story"><i class="fas fa-camera"></i></div>
+                 <div class="groups"><i class="fas fa-users"></i></div>
+                 <div class="account"><i class="fas fa-user"></i></div>
+
+             </footer>
+         </section>
+    </div>
+
+    
+</body>
+</html>
+
+

@@ -1,0 +1,315 @@
+body  {
+    margin: 0;
+    font-family: sans-serif; 
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+h3 {
+    margin: 0;
+    padding: 0.5em;
+}
+
+p {
+    margin: 0;
+    padding: 0.5em;
+}
+
+a {
+    text-decoration: none;
+    color: #111122;
+}
+
+
+/* .phone {
+    background-color: #444;
+    width: 80%;
+    height: 90%;
+
+    position: absolute;
+    margin: auto;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+} */
+
+/* CHAT APP STYLE */
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    background-color: #777;
+}
+
+.app header, 
+.app footer {
+    background: linear-gradient(to right,#798DC2, #715798);
+    height: 8vh;
+}
+
+.app main {
+    background: linear-gradient(to right bottom,#715798,#111122);
+    height: 84vh;
+    overflow-y: scroll;
+}
+
+.app header {
+    position: relative;
+}
+
+.app header .menu, .app__messages, .search__bar {
+    display: inline-block;
+    color: #111122;
+    
+    padding-top: .5em;
+    padding-bottom: .5em;
+    
+} 
+
+.app header .menu {
+    position: absolute;
+   left: 1em;
+   top: .5em;
+   
+}
+
+.app header .app__messages {
+    position: absolute;
+    left: 40vw;
+    
+}
+
+.app header .search__bar {
+    position: absolute;
+    right: 1em;
+    top: .5em;
+    
+}
+
+.app footer {
+    position: relative;
+}
+
+.app footer .chat, .calls, .story, .groups, .account {
+    display: inline-block;
+    position: absolute;
+    color: #111122;
+    font-size: 1.5em;
+    padding-bottom: .25em;
+    padding-top: .25em;
+}
+
+.app .chat {
+    left: 5vw;
+}
+
+.app .calls {
+    left: 25vw;
+}
+
+.app .story {
+    left: 47vw;
+}
+
+.app .groups {
+    left: 70vw;
+}
+
+.app .account {
+    right: 5vw;
+}
+
+
+
+
+
+
+
+
+
+
+/* CONTACTS */
+
+.contacts__profile {
+    height: 13vh;
+    border-bottom: 1px solid rgb(90, 89, 89);
+    margin-bottom: .5em;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    position: relative;
+    
+    
+}
+
+.profile__avatar {
+    position: relative;
+    height: 15vh;
+    width: 15vw;
+    display: inline-block;
+    margin-left: .3em;
+    border-radius: 100%;
+    /* overflow: hidden; */
+
+    z-index: 1;
+}
+
+.profile__avatar::before {
+   content: "";
+   display: block;
+   width: .7em;
+   height: .7em;
+   
+   position: absolute;
+   border-radius: 100%;
+
+   top: .25em;
+   left: .25em;
+   z-index: 3;
+}
+   /* online */
+.status--online .profile__avatar::before {
+    border: .1em solid #514A69;
+   background-color:#00cc00;
+}
+   /* offline */
+.status--offline .profile__avatar::before {
+    border: .1em solid #514A69;
+   background-color: white;
+}
+
+  /* 5-10min */
+.status--recent .profile__avatar::before {
+    
+    border: .1em solid #514A69;
+    background: linear-gradient(to top left,#00cc00,#d9f2d9);
+}
+   /* A WHILE */
+.status--awhile .profile__avatar::before {
+    
+    border: .1em solid #715798;
+    background: gray;
+}
+
+
+.profile__avatar img {
+    width: 100%;
+    position: absolute;
+    border-radius: 100%;
+    z-index: 2;
+   
+    
+}
+
+.profile__text {
+    width: 19em;
+    
+    position: absolute;
+    bottom: 1em;
+    
+    display: inline-block;
+
+    overflow:hidden;
+   
+}
+
+.contacts__profile .message__status {
+    display: inline-block;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    
+}
+
+.contacts__profile .message__time {
+    display: inline-block;
+    position: absolute;
+    bottom: 3em;
+    right: 1em;
+    
+
+}
+
+.status--delivered {
+    color: rgb(18, 107, 180);
+}
+
+.status--seen {
+    background-color: rgb(18, 107, 180);
+    border-radius: 100%;
+    padding: .1em;
+}
+
+
+/* LANDSCAPE  */
+
+@media (orientation: LANDSCAPE) {
+    .profile__avatar {
+        margin-left: 2em;
+    }
+
+    .profile__text {
+        margin-left: 1em;
+    }
+    
+    
+    .message__status {
+        position: absolute;
+        margin-right: 2em;
+    }
+
+    .message__time {
+        position: absolute;
+        margin-right: 2em;
+    }
+}
+
+@media (orientation: LANDSCAPE) and (min-width: 1000px) {
+    body {
+        font-size: 1.5em;
+    }
+
+    
+}
+/* 
+@media screen and (orientation: landscape) {
+    .contacts__profile {
+        height: 26vh;
+    }
+
+   
+}
+
+@media screen and (orientation: portrait) {
+    .contacts__profile {
+        height: 11vh;
+    }
+
+   
+} */
+
+
+
+
+
+/*
+  HW- add class 5-10min (recent -gradient),  15 (a while - gray), online (green), offline (white)  min utilizator online - gradient verde ptr online
+  HW - checked sign - sent (white), received (blue), seen (white on blue background)  - message status
+  HW: read about meta viewport
+      -add 2 rules: zoom max/min tot sa fie 100%, sa nu se mareasca si sa nu se microreze (maximum-scale=1.0, minimum-scale=1.0)
+      * VIEWPORT - viewport is the area of the window in which web content can be seen
+                 -this mechanism is not so good for pages that are optimized for narrow screens using media queries 
+                 - The initial-scale property controls the zoom level when the page is first loaded. 
+                 - The maximum-scale, minimum-scale, and user-scalable properties control how users are allowed to zoom the page in or out.
+
+  HW: vh -> portrait mode: always 7 contacts -vertical - any device 
+         -> landscape mode: always 3 contacts -vertical  -any device
+  HW - hint to show the list continues 
+*/
+
